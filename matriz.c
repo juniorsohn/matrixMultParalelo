@@ -63,10 +63,12 @@ void *matriz_multiplicar_paralelo(void* args){
    //
    
    thread_params *p = (thread_params *) args;
-    int tid = p->tid;
-    int n   = p->A->linhas;
-    int m   = p->B->colunas;
-    int k_max = p->A->colunas;
+   int tid = p->tid;
+   int n   = p->A->linhas;
+   int m   = p->B->colunas;
+   int k_max = p->A->colunas;
+
+   printf("sou a thread %d!!\n",tid);
 
     // cada thread percorre as linhas i = tid, tid+T, tid+2T, ...
     for (int i = tid; i < n; i += p->num_threads) {

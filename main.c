@@ -64,8 +64,8 @@ int main(int argc, char **argv)
 */
     // D = matriz_multiplicar_paralelo(A, B);
 
-    //printf("Matriz D\n");
-    //matriz_imprimir(D);
+    printf("Matriz D\n");
+    matriz_imprimir(D);
 
     matriz_destruir(A);
     matriz_destruir(B);
